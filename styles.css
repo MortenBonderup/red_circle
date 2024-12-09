@@ -1,0 +1,76 @@
+.section {
+            background-color: lightgray;
+            height: 50vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden; /* Ensure the circle is cropped at the bottom */
+        }
+        .circle {
+            background-color: red;
+            width: 100vh;
+            height: 100vh;
+            border-radius: 50%;
+            position: absolute;
+            right: -75vh;
+            top: -25vh; /* Move the circle up by 50% of its height */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle img {
+            position: absolute;
+            width: 100px;
+            height: 120px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .circle {
+                top: calc(70vh - 50vh); /* Center the circle horizontally at the bottom */
+                left: calc(50% - 50vh); /* Center the circle horizontally */
+                right: auto; /* Reset right property */
+            }
+
+            .circle img {
+                top: 70px;
+            }
+        }
+
+
+        @media only screen and (min-width: 768px) {
+            .circle {
+                right: -60vh;
+            }
+
+            .circle img {
+                left: 17%;
+            }
+
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .circle {
+                right: -40vh;
+            }
+
+            .circle img {
+                left: 25%;
+            }
+
+        }
+
+        @media only screen and (min-width: 2000px) {
+            .circle {
+                right: -30vh;
+            }
+
+            .circle img {
+                left: 30%;
+            }
+
+        }
+
+    
